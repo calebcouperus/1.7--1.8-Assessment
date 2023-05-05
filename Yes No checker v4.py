@@ -5,10 +5,10 @@ Based off: Yes No checker v3.py"""
 
 
 # function starts
-def yes_no_checker(question):
+def yes_no_checker(question_yes_no):
     while True:
         # Asks user if they have played before
-        answer = input(question).lower()
+        answer = input(question_yes_no).lower()
 
         # If yes output 'program continues'
         if answer == 'yes' or answer == 'y':
