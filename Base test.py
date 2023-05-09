@@ -1,15 +1,15 @@
-""""Base file v1
-all finished components"""
-
+""""Base file test
+Figuring out how to put it all together"""
+import random
 
 # List with all the questions
-QUESTIONS = ["What number is 'Tahi' in english?: ", "What number is 'Rua' in english?: ",
-             "What number is 'Toru in english?: ", "What number is 'Wha' in english?: ",
-             "What number is 'Rima' in english?: ", "What number is 'Ono' in english?: ",
-             "What number is 'Whitu' in english?: ", "What number is 'Waru' in english?: ",
-             "What number is 'Iwa' in english?: ", "What number is 'Tekau' in english?: "]
-# List with all the answers
-ANSWERS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+questions_answers = [("What number is 'Tahi' in english?: ", 1), ("What number is 'Rua' in english?: ", 2),
+                     ("What number is 'Toru in english?: ", 3), ("What number is 'Wha' in english?: ", 4),
+                     ("What number is 'Rima' in english?: ", 5), ("What number is 'Ono' in english?: ", 6),
+                     ("What number is 'Whitu' in english?: ", 7), ("What number is 'Waru' in english?: ", 8),
+                     ("What number is 'Iwa' in english?: ", 9), ("What number is 'Tekau' in english?: ", 10)]
+# Randomising order of questions
+random.shuffle(questions_answers)
 
 
 # Yes/No Checker Function
@@ -80,11 +80,11 @@ while next_round != 'x':
     next_round = input("\n"
                        "Next: <enter>\n"
                        "Quit: 'x'").lower()
-    # To break the loop if teh want to quit the game
+    # To break the loop if they want to quit the game
     if next_round == 'x':
         break
     print(f"\nRound {round_number + 1}")
-    correct_incorrect = integer_checker(QUESTIONS[round_number], ANSWERS[round_number])
+    correct_incorrect = integer_checker(questions_answers[round_number][0], questions_answers[round_number][1])
     print(f"\n{correct_incorrect}")
     if correct_incorrect == "Correct":
         score += 1
@@ -93,6 +93,7 @@ while next_round != 'x':
         break
 
 # Final score and 'Goodbye'
-print(f"You scored {score}/10")
+print(f"\n"
+      f"You scored {score}/10")
 print("Thanks for playing\n"
       "---Goodbye---")
