@@ -36,7 +36,13 @@ def yes_no_checker(question_yes_no):
 # Instructions
 def instructions():
     # Instruction go in here...
-    print("\nInstructions...")
+    print("\nThis is a maori quiz game for number 1-10\n"
+          "Press <enter> to move to the next question\n"
+          "Enter your answer and when you're sure its right press <enter>\n"
+          "The quiz will tell you whether it was right or wrong,\nyou will also get a final score at the end.\n"
+          "Press 'x' when prompted if you would like to exit at any time\n"
+          "Press <enter> to start"
+          ">>>")
 
 
 # Integer Checker Function
@@ -87,13 +93,16 @@ while next_round != 'x':
     correct_incorrect = integer_checker(questions_answers[round_number][0], questions_answers[round_number][1])
     print(f"\n{correct_incorrect}")
     if correct_incorrect == "Correct":
+        # Scoring
         score += 1
+    # keeping track of rounds
     round_number += 1
+    # stops the game after 10 questions to avoid error
     if round_number == 10:
         break
 
 # Final score and 'Goodbye'
 print(f"\n"
-      f"You scored {score}/10")
+      f"You scored {score}/{round_number}")
 print("Thanks for playing\n"
       "---Goodbye---")
