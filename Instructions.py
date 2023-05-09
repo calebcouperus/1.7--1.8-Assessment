@@ -1,5 +1,5 @@
-""""Base file test
-Figuring out how to put it all together"""
+""""Instructions
+Base file for testing instructions"""
 import random
 
 # List with all the questions
@@ -77,32 +77,5 @@ played_before = yes_no_checker("Have you played this Quiz before?: ")
 # If they haven't played before show instructions
 if played_before == "No":
     instructions()
-
-# Rounds
-round_number = 0
-next_round = ""
-score = 0
-while next_round != 'x':
-    next_round = input("\n"
-                       "Next: <enter>\n"
-                       "Quit: 'x'").lower()
-    # To break the loop if they want to quit the game
-    if next_round == 'x':
-        break
-    print(f"\nRound {round_number + 1}")
-    correct_incorrect = integer_checker(questions_answers[round_number][0], questions_answers[round_number][1])
-    print(f"\n{correct_incorrect}")
-    if correct_incorrect == "Correct":
-        # Scoring
-        score += 1
-    # keeping track of rounds
-    round_number += 1
-    # stops the game after 10 questions to avoid error
-    if round_number == 10:
-        break
-
-# Final score and 'Goodbye'
-print(f"\n"
-      f"You scored {score}/{round_number}")
-print("Thanks for playing\n"
-      "---Goodbye---")
+else:
+    print("Program continues...")
