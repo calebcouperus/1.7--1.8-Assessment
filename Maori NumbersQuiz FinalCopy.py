@@ -35,6 +35,7 @@ def yes_no_checker(question_yes_no):
 
 # Instructions
 def instructions():
+
     # Instruction go in here...
     print("\n---How to Play---\n"
           "This is a maori quiz game for number 1-10\n"
