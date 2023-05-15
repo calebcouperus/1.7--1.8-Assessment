@@ -1,5 +1,5 @@
-""""Base file test
-Figuring out how to put it all together"""
+""""Final Copy
+Complete tested program with all final components"""
 import random
 
 # List with all the questions
