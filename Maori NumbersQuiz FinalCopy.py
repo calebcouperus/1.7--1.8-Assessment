@@ -43,7 +43,6 @@ def instructions():
           "Enter your answer and when you're sure its right press <enter>\n"
           "The quiz will tell you whether it was right or wrong,\nyou will also get a final score at the end.\n"
           "Press 'x' when prompted if you would like to exit at any time\n"
-          "Press <enter> to start"
           ">>>")
 
 
