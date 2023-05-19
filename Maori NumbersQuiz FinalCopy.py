@@ -60,7 +60,7 @@ def integer_checker(question, answer):
                 return "Correct"
             # If the answer is incorrect
             else:
-                return "Incorrect"
+                return f"Incorrect, correct answer was {answer}"
 
         # Error for invalid type of input eg.(float, string)
         except ValueError:
