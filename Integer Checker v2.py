@@ -1,6 +1,7 @@
 """Integer Checker v2
 Based off Integer Checker v1
-fixes issue where anything other than an integer entered crashes the program apart from strings"""
+fixes issue where anything other than an integer entered crashes the program
+ apart from strings"""
 
 # Asks user for an integer between 1 and 10
 number = float(input("Enter and integer between 1 and 10\n"

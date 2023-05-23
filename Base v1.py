@@ -3,11 +3,16 @@ all finished components"""
 
 round_number = 0
 # List with all the questions
-QUESTIONS = ["What number is 'Tahi' in english?: ", "What number is 'Rua' in english?: ",
-             "What number is 'Toru in english?: ", "What number is 'Wha' in english?: ",
-             "What number is 'Rima' in english?: ", "What number is 'Ono' in english?: ",
-             "What number is 'Whitu' in english?: ", "What number is 'Waru' in english?: ",
-             "What number is 'Iwa' in english?: ", "What number is 'Tekau' in english?: "]
+QUESTIONS = ["What number is 'Tahi' in english?: ",
+             "What number is 'Rua' in english?: ",
+             "What number is 'Toru in english?: ",
+             "What number is 'Wha' in english?: ",
+             "What number is 'Rima' in english?: ",
+             "What number is 'Ono' in english?: ",
+             "What number is 'Whitu' in english?: ",
+             "What number is 'Waru' in english?: ",
+             "What number is 'Iwa' in english?: ",
+             "What number is 'Tekau' in english?: "]
 # List with all the answers
 ANSWERS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -75,6 +80,7 @@ if played_before == "No":
 # Rounds
 
 print(f"\nRound {round_number + 1}")
-correct_incorrect = integer_checker(QUESTIONS[round_number], ANSWERS[round_number])
+correct_incorrect = integer_checker(QUESTIONS[round_number],
+                                    ANSWERS[round_number])
 print(f"\n{correct_incorrect}")
 round_number += 1
